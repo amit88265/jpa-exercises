@@ -1,0 +1,4 @@
+
+Running dbApp with ORDINAL store index of enums e g for FULL_TIME it is 0.
+Running dbApp with STRING store index of enums store value of enums not the ordinal value.
+

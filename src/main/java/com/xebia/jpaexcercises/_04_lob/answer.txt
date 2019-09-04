@@ -1,0 +1,4 @@
+
+Store an image file in the form of binary data.
+convert the image file into byte stream using Files.readAllBytes("path/to/file");
+then save it to db.

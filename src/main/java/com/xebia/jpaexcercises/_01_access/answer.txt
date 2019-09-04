@@ -1,0 +1,10 @@
+With EmployeeWithFieldAccess
+
+1.A new row is created in db jpaex under table EmployeeWithFieldAccess which contains
+id=1,name=Test Employee, email=test@test.com
+
+2.An error occurred which was gone with the addition of EmployeeWithPropertyAccess.class to persistence.xml file.
+ A table was created which contains id=1,name=Test Employee, email=test@test.com.
+
+3. Here an error occurred which was was gone with addition of setEmailAddress() method in  EmployeeWithMixedAccess.
+A table EmployeeWithMixedAccess was created which contains id=1, email_addres=test@test.com , username=Test Employee.

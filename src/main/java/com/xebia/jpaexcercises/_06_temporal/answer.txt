@@ -1,0 +1,1 @@
+It saves date in the form of sql compatible type since we are using @temporal annotation.
