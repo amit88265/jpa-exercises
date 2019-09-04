@@ -10,7 +10,7 @@
         <class>com.xebia.jpaexcercises._04_lob.Employee</class>
         <class>com.xebia.jpaexcercises._05_enum.Employee</class>
         <class>com.xebia.jpaexcercises._06_temporal.Employee</class>
-        <class>com.xebia.jpaexcercises._07_id_gen</class>
+        <class>com.xebia.jpaexcercises._07_id_gen.Employee</class>
 
         <exclude-unlisted-classes>true</exclude-unlisted-classes>
         <properties>

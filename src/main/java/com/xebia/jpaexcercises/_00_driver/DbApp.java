@@ -1,6 +1,6 @@
 package com.xebia.jpaexcercises._00_driver;
 
-import com.xebia.jpaexcercises._06_temporal.Employee;
+import com.xebia.jpaexcercises._07_id_gen.Employee;
 import com.xebia.jpaexcercises._05_enum.EmployeeType;
 
 import javax.imageio.ImageIO;
@@ -24,7 +24,7 @@ public class DbApp {
         entityManager.getTransaction().begin();
 
         Employee employee = new Employee();
-        employee.setId(1L);
+//        employee.setId(1L);
 //        employee.setUsername("Test Employee");
 //        employee.setEmailAddress("test@gmail.com");
 
@@ -43,6 +43,18 @@ public class DbApp {
         employee.setRegisteredAt(new Date());
 
         entityManager.persist(employee);
+
+
+        Employee employee1 = new Employee();
+//        employee1.setId(1L);
+        employee1.setName("amit");
+        employee1.setBio("hello world");
+        employee1.setEmployeeType(EmployeeType.CONTRACTOR);
+        employee1.setDateOfBirth(new Date());
+        employee1.setRegisteredAt(new Date());
+        entityManager.persist(employee1);
+
+
         entityManager.getTransaction().commit();
 
         Employee foundEmployee = entityManager.find(Employee.class, 1L);

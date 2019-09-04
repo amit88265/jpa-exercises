@@ -5,3 +5,12 @@
 3. Try out id generation using database sequence. What is a sequence?
 4. Find out which id generation strategy is best and when
 5. Should use long id or UUID? Which to use when?
+
+
+Answer
+1.Tried @tableGenerator strategy.
+2.We need it as to determine next id and to create batch of ids.
+3.Sequence uses database to store next used value.
+4.SEQUENCE IS BEST AS IT IS FAST.
+5.long should be used for most of the places as it fast and take less space.
+ use uuid when we need to store info in id or we have less database operation between table.
