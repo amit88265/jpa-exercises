@@ -1,0 +1,38 @@
+# Questions
+
+> To run this example, rename `10-persistence.xml` to `persistence.xml`
+
+1. How can you make this example run without any exception?
+2. How many tables will be created? Which table has the foreign key?
+3. How can you rename foreign key name to `plot_id`?
+4. How can you create bidirectional mapping between `Employee` and `ParkingSpace`?
+5. Create an employee and assign them a parking lot. Make sure if you fetch parking employee is also fetched.
+Now, how can you delete the parking lot?
+
+
+#Answers
+1.Add CascadeType to @OneToOne in Employee and exception will go away.
+
+2.Three tables are created viz.
+  a.employees having foreign key
+  b.parking_lot
+  c.hibernate_sequence
+
+3.Like this
+    @JoinColumn(name = "plot_id")
+    private ParkingSpace parkingSpace;
+
+4.We can create bidirectional relationship by adding this line to ParkingSpace.java:
+     @OneToOne(mappedBy = "parkingSpace")
+     private Employee employee
+
+     ????How is it useful? How can we get employee data from parking space?
+
+     It is useful in the sense that using mappedBy will tell it wont own foreign key ref and therefore adding mappedby
+     will not let create an foreign key column in parking space.
+
+5. To fetch employee along with parking space just implement getter and setter and use setter to get employee.
+To delete parking lot it can be done by two ways
+     a. Either you chnage CascadeType to ALL and add entityManager.remover(ParkingSpace p) in OneToOneApp.java
+     b.Or remove cascadeType attribute and persist ParkingSpace explicitly and then
+     add entityManager.remover(ParkingSpace p) in OneToOneApp.java

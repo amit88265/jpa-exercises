@@ -12,7 +12,7 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-//    @TableGenerator(name = "gen",initialValue= 0,allocationSize = 5)
+    @TableGenerator(name = "gen",initialValue= 0,allocationSize = 5)
     private Long id;
 
     @Column(name = "full_name")
