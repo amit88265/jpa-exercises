@@ -31,28 +31,28 @@ public class DbApp {
 //        employee.setName("amit");
 //        employee.setBio("hey I am a coder");
 
-        employee.setName("amit");
-        employee.setBio("hello world");
-//        try {
-//            employee.setPicture(Files.readAllBytes(Paths.get("/home/amitkumar/Documents/JavaTraining/jpa-exercises-master/src/main/java/com/xebia/jpaexcercises/_04_lob/20190625_150405.jpg")));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-        employee.setEmployeeType(EmployeeType.CONTRACTOR);
-        employee.setDateOfBirth(new Date());
-        employee.setRegisteredAt(new Date());
-
-        entityManager.persist(employee);
-
-
-        Employee employee1 = new Employee();
-//        employee1.setId(1L);
-        employee1.setName("amit");
-        employee1.setBio("hello world");
-        employee1.setEmployeeType(EmployeeType.CONTRACTOR);
-        employee1.setDateOfBirth(new Date());
-        employee1.setRegisteredAt(new Date());
-        entityManager.persist(employee1);
+//        employee.setName("amit");
+//        employee.setBio("hello world");
+////        try {
+////            employee.setPicture(Files.readAllBytes(Paths.get("/home/amitkumar/Documents/JavaTraining/jpa-exercises-master/src/main/java/com/xebia/jpaexcercises/_04_lob/20190625_150405.jpg")));
+////        } catch (IOException e) {
+////            e.printStackTrace();
+////        }
+//        employee.setEmployeeType(EmployeeType.CONTRACTOR);
+//        employee.setDateOfBirth(new Date());
+//        employee.setRegisteredAt(new Date());
+//
+//        entityManager.persist(employee);
+//
+//
+//        Employee employee1 = new Employee();
+////        employee1.setId(1L);
+//        employee1.setName("amit");
+//        employee1.setBio("hello world");
+//        employee1.setEmployeeType(EmployeeType.CONTRACTOR);
+//        employee1.setDateOfBirth(new Date());
+//        employee1.setRegisteredAt(new Date());
+//        entityManager.persist(employee1);
 
 
         entityManager.getTransaction().commit();

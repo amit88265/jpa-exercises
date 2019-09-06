@@ -7,7 +7,6 @@ import java.util.Map;
 @Table(name = "employees")
 public class Employee {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -16,7 +15,8 @@ public class Employee {
 
     @ElementCollection
     @CollectionTable(
-            name = "phonetype_to_phone_number",
+//            name = "phonetype_to_phone_number",
+            name = "phone_numbers",
             joinColumns = @JoinColumn(name = "emp_id")
     )
     @MapKeyColumn(name = "phone_type")

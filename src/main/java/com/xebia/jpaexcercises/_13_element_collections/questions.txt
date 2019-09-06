@@ -15,3 +15,30 @@ use jpaex;
 4. How can you ensure tables created for Item and NickNames have primary key with name `emp_id` instead of `Employee_id`?
 5. Are items and nickNames fetched lazily?
 
+#Answer
+1.  4 Tables are created viz.
+   a.employees: id , name
+   b.Employee_items:Employee_id,name,price
+   c.Employee_nickNames:Employee_id,nickNames
+
+2.In that case item will be inserted in employees table with attribute name and price.
+
+3.Add this line to Employee.java
+    @ElementCollection(fetch = FetchType.LAZY)
+    @CollectionTable(name ="items")
+    private List<Item> items;
+
+    @ElementCollection
+    @CollectionTable(name = "nick_names")
+    private Set<String> nickNames;
+
+4.Add this line to Employee.java
+        @ElementCollection(fetch = FetchType.LAZY)
+        @CollectionTable(name ="items",joinColumns = @JoinColumn(name="emp_id"))
+        private List<Item> items;
+
+        @ElementCollection
+        @CollectionTable(name = "nick_names",joinColumns = @JoinColumn(name="emp_id"))
+        private Set<String> nickNames;
+
+ 5. todo: do it tomorrow

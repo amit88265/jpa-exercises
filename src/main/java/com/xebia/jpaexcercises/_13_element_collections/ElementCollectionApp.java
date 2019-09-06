@@ -19,8 +19,12 @@ public class ElementCollectionApp {
             entityManager.getTransaction().begin();
 
             Employee employee = new Employee("Test Employee");
-            employee.setItems(Arrays.asList(new Item("pen", BigDecimal.valueOf(100L)), new Item("notebook",BigDecimal.valueOf(200L))));
+
+            employee.setItems(Arrays.asList(new Item("pen", BigDecimal.valueOf(100L)),
+                    new Item("notebook",BigDecimal.valueOf(200L))));
+
             Set<String> nickNames = new HashSet<>();
+
             nickNames.add("test1");
             nickNames.add("test2");
             nickNames.add("test3");

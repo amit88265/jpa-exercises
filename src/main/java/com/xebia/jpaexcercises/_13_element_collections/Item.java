@@ -6,19 +6,19 @@ import java.math.BigDecimal;
 @Embeddable
 public class Item {
 
-    private String name;
+    private String _name;
     private BigDecimal price;
 
     public Item() {
     }
 
     public Item(String name, BigDecimal price) {
-        this.name = name;
+        this._name = name;
         this.price = price;
     }
 
     public String getName() {
-        return name;
+        return _name;
     }
 
     public BigDecimal getPrice() {
